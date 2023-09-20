@@ -16,7 +16,7 @@ export interface Options {
 export async function testDoc(options: Options): Promise<void> {
   const filePaths = await getPaths(options.fileMatch);
   const babelOpts = {
-    sourceType: "module",
+    sourceType: 'module' as any,
     plugins: options.parsers
   };
 
